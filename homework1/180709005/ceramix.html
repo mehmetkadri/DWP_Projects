@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ceramix</title>
+    <link rel="stylesheet" href="ceramix.css">
+    <script src="ceramix.js"></script>
+</head>
+
+<body onload="displayCeramicsOnPage()">
+
+<div class="header">
+    <div style="width: 200px">
+        <h1 onclick="window.history.go(0)" style="color: #564141; cursor: pointer">Ceramix</h1>
+    </div>
+    <p style="color: #564141">Handmade Pottery Since 2022</p>
+
+</div>
+
+<div class="topNav">
+    <a onclick="window.history.go(0)">Products</a>
+    <a onclick="window.history.go(0)">Our Artists</a>
+    <a onclick="openAddCeramic()">Sell Items</a>
+    <a onclick="window.history.go(0)" style="float:right">Contact Us</a>
+</div>
+
+
+<div class="centered_body">
+    <div id="ceramic_container" class="container" style="justify-content: initial"></div>
+</div>
+
+
+<button id = 'basket_button' class="basket_icon" onclick="openBasket()"></button>
+
+<div id="basket" class="basket" style="display: none; overflow-y: scroll">
+    <button class="ad" onclick="document.getElementById('basket').style.display='none'" >X</button>
+
+    <div class="basket_total">
+        <div class="container">
+            <h4 style="font-size: 20px; margin: 1px 120px;">TOTAL</h4>
+        </div>
+        <div class="container" style=" margin-top: 1px">
+            <h4 id="cost" style="font-size: 20px; margin: 1px 100px;">0 ₺</h4>
+        </div>
+        <div class="container" style="position: center; margin-top: 10px">
+            <button disabled id="buyButton" onclick="buy()" ><strong style="font-size: 20px">BUY</strong></button>
+        </div>
+    </div>
+
+    <h2 style="padding-left: 30px; padding-top: 20px">Basket</h2>
+    <div id="container_basket" class="container_basket">
+
+    </div>
+
+</div>
+
+<div id="checkOut" class="basket" style="left:400px;right: 400px;">
+    <div style="display: flex; flex-direction: column">
+        <label for="address" style="margin-left: 20px; margin-top: 20px"><strong>Shipping Address:</strong><br><br><textarea id="address" style="width: 400px; height: 170px"></textarea></label>
+        <strong style="margin-left: 20px; margin-top: 30px">Payment Method:</strong><br><br>
+
+        <label id="wire" for="radio1" style="margin-left: 15px"><input type="radio" id="radio1" name="1" onclick="pay_wire()">Wire Transfer</label>
+        <label id="card" for="radio2" style="margin-left: 15px"><input type="radio" id="radio2" name="1" onclick="pay_card()">Credit Card</label>
+
+        <div id="wire_info" style="display: none; margin-left: 15px; margin-top: 15px; margin-bottom: 15px">
+            <h4> You will be notified about your shipment after you have completed the transaction to the account number below.</h4>
+            <strong> TR09 0392 1923 4958 8275 8493 21</strong>
+        </div>
+        <div id="card_info" style="display: none; margin-left: 15px; margin-top: 15px; margin-bottom: 15px">
+            <label for="userName"> <strong style="color: #564141">Name:</strong> <br></label> <input type="text" id="userName" style="margin-top: 10px; margin-bottom: 10px; height: 30px; width: 400px">  <br>
+            <label for="cardNumber"> <strong style="color: #564141">Credit Card Number:</strong> <br></label> <input type="number" id="cardNumber" style="margin-top: 10px; height: 30px; width: 400px">  <br>
+            <div style="display: flex; margin-top: 10px">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="expDay"> <strong style="color: #564141">Expiration Day:</strong> <br></label> <input type="number" id="expDay" style="margin-top: 10px; height: 30px; width: 100px">  <br>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label for="expMonth"> <strong style="color: #564141">Expiration Month:</strong> <br></label> <input type="number" id="expMonth" style="margin-top: 10px; height: 30px; width: 100px">  <br>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label for="CVV"> <strong style="color: #564141">CVV:</strong> <br></label> <input type="number" id="CVV" style="margin-top: 10px; height: 30px; width: 100px">  <br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <label onclick="read()" for="read" style="margin-left: 15px"><input type="checkbox" id="read" name="2">I've read ...</label>
+
+        <div style="display: flex; flex-direction: row">
+            <button onclick="orderCancelled()" style="color: white; background-color: #be0101; border-radius: 10px; height: 50px; width: 200px; margin-top: 20px; margin-left: 450px"><strong style="font-size: 20px">Cancel</strong></button>
+            <button id="confirmButton" disabled onclick="orderCompleted()" style="color: white; background-color: gray; border-radius: 10px; height: 50px; width: 200px; margin-top: 20px; margin-left: 10px; margin-right: 20px"><strong style="font-size: 20px">Confirm</strong></button>
+        </div>
+</div>
+</div>
+
+
+<div id="newItem" class="basket" style="display: none; bottom: 125px; top: 125px">
+    <button class="ad" onclick="document.getElementById('newItem').style.display='none'">X</button>
+
+    <form style="margin-top: 40px; margin-left: 40px">
+        <div style="margin-left: 20px; margin-top: 20px">
+            <label for="itemName"> <strong style="color: #564141">Ceramic Name:</strong> <br></label> <input type="text" id="itemName" style="margin-top: 10px; height: 40px; width: 600px">  <br>
+        </div>
+
+        <div style="margin-left: 20px; margin-top: 20px">
+            <label for="itemDescription"> <strong style="color: #564141">Ceramic Description:</strong> <br></label> <input type="text" id="itemDescription" style="margin-top: 10px; height: 40px; width: 600px">  <br>
+        </div>
+
+        <div style="margin-left: 20px; margin-top: 20px">
+            <label for="itemPrice"> <strong style="color: #564141">Ceramic Price:</strong> <br></label> <input type="number" id="itemPrice" style="margin-top: 10px; height: 40px; width: 600px">  <br>
+        </div>
+
+        <div style="margin-left: 20px; margin-top: 20px">
+            <label for="itemPictureLink"> <strong style="color: #564141">Ceramic Picture Link:</strong> <br></label> <input type="text" id="itemPictureLink" style="margin-top: 10px; height: 40px; width: 600px">  <br>
+        </div>
+    </form>
+    <button id="addNewItemButton" onclick="addCeramic()" style="right: 300px; bottom: 250px; position: fixed; height: 50px; width: 100px; background-color: #564141; cursor: pointer">
+        <strong style="color: white">ADD</strong>
+    </button>
+</div>
+
+</body>
+</html>

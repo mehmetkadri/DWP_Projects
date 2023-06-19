@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fourth Lesson</title>
+    <script src="js/firstJS.js"></script>
+</head>
+<body>
+
+<!--change text button-->
+<h2 id="firstH" onclick="myFunc()">Demo JS in Head</h2>
+<p id="firstP"> Lorem ipsum </p>
+<button id="firstB" type="button" onclick="myFunc()"> Change </button> <br>
+<br><br>
+
+<!--calculator-->
+<label for="fname">First number:</label>
+<input type="text" id="fname" name="fname"><br><br>
+<p id="operatorContainer" style="visibility: hidden"> "</p>
+<label for="lname">Second number:</label>
+<input type="text" id="lname" name="lname"><br><br>
+<button id="sum" type="button" onclick="setOperator(id)"> + </button>
+<button id="sub" type="button" onclick="setOperator(id)"> - </button>
+<button id="mul" type="button" onclick="setOperator(id)"> * </button>
+<button id="div" type="button" onclick="setOperator(id)"> / </button>
+
+<button id="sumB" type="button" onclick="sumFunc()">Calculate</button>
+<p id="sumRes"></p>
+<br><br>
+
+<!--sum array-->
+<input type="text" id="numArr"> <br><br>
+<button id="sumArr" type="button" onclick="sumArrFunc()">Sum Array</button><br><br>
+<p id="sumArrRes"></p>
+<br><br>
+<br><br>
+<br><br>
+
+<!--ap calculator-->
+<input type="text" id="bar"><br><br>
+<button id="sumAP" type="button" onclick="setOperator(id)"> + </button>
+<button id="subAP" type="button" onclick="setOperator(id)"> - </button>
+<button id="mulAP" type="button" onclick="setOperator(id)"> * </button>
+<button id="divAP" type="button" onclick="setOperator(id)"> / </button>
+<p id="operatorContainerAP" style="visibility: hidden"> "</p>
+
+<button id="calcB" type="button" onclick="calcFunc()">Calculate</button>
+<p id="calcRes"></p>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<!--list-->
+
+<input type="text" id="separator"><br><br>
+<input type="text" id="listElem"><br><br>
+<button id="crList" type="button" onclick="createList()">Create</button>
+<p id="list"></p>
+
+
+
+</body>
+</html>

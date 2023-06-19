@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    font-family: "Quicksand", sans-serif;
+    background: linear-gradient(to right, #c48639, #c59b66, #af8e6e);
+    place-items: center;
+}
+
+a{
+    cursor: pointer;
+}
+
+.header {
+    text-align: left;
+    background: #d0c4b8;
+    padding: 5px 5px 5px 20px;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.topNav {
+    overflow: hidden;
+    background-color: #ccad86;
+}
+
+.topNav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-block: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
+}
+
+.topNav a:hover {
+    color: #564141;
+}
+
+@media screen and (max-width: 400px) {
+    .topNav a {
+        float: none;
+        width: 100%;
+    }
+}
+
+.centered_body {
+    display: grid;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    border-radius: 1em;
+    background: #d3b08d;
+    background: linear-gradient(to right, #6e6561, #cbcba1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    height: 450px;
+}
+
+.card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.card__footer {
+    display: grid;
+}
+
+.user__info > small {
+    color: #666;
+}
+
+.user__info {
+    display: grid;
+}
+
+.addToCart{
+    padding: 10px;
+    background-color: #382c2c;
+    color: white;
+    font-weight: bold;
+}
+
+.basket_icon{
+    position: fixed;
+    float: right;
+    right: 20px;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;display: initial ;
+    background-image: url('cart.png');
+    background-repeat: no-repeat;
+    background-size: 101% 101%;
+    border: 1px solid #F3773E;
+    cursor: pointer;
+}
+
+.basket{
+    position: fixed;
+    left:250px;
+    bottom: 50px;
+    top: 50px;
+    right: 250px;
+    border: 10px solid #564141;
+    background-color: #c59b66;
+    display: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+button.ad{
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    color: #c59b66;
+    background-color: #564141;
+    font-size: 20px;
+    border-radius: 7px
+}
+
+.container_basket {
+    display: flex;
+    flex-wrap: wrap;
+    margin-block: 2rem;
+    gap: 2rem;
+    max-width: 1200px;
+    padding-left: 30px;
+}
+
+.basket_items{
+    padding: 30px;
+}
+
+.basket_item{
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.card_cart{
+    display: flex;
+    flex-direction: row;
+    width: clamp(30rem, calc(30rem + 2vw), 37rem);
+    height: clamp(7rem, calc(7rem + 1vw), 8rem);
+    overflow: hidden;
+    border-radius: 1em;
+    background: #d3b08d;
+    background: linear-gradient(to right, #6e6561, #cbcba1);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.card__body_cart{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-left: 20px;
+    margin-top: 3px;
+    width: 150px;
+}
+
+.card__footer_cart{
+    display: flex;
+}
+
+.user__info_cart{
+    display: grid;
+    margin-top: 5px;
+    width: 100px;
+}
+
+.deleteFromCart_cart{
+    padding: 5px;
+    background-color: #c90000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: clamp(1rem, calc(1rem + 2vw), 2.5rem);
+    margin-left: clamp(8rem, calc(8rem + 2vw), 10rem);
+}
+
+.basket_total{
+    float: right;
+    margin-top: 120px;
+    background-color: #ccad86;
+    border-radius: 10px;
+    width: 300px;
+    height: 240px;
+    display: grid;
+}
+
+img.img_cart{
+    max-height: 100px;
+    border-radius: 10px;
+}
+
+h4.item_name_cart{
+    font-size: 20px;
+    margin-left: clamp(1rem, calc(1rem + 1vw), 2rem);
+    margin-top: 20px; margin-bottom: 1px
+}
+
+h3.item_price_cart{
+    font-size: 20px;
+    margin-left: clamp(1rem, calc(1rem + 1vw), 2rem);
+    margin-top: 1px
+}
+
+#buyButton{
+    color: white; background-color: gray; border-radius: 10px; height: 50px; width: 200px
+}

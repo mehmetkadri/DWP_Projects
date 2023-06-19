@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seventh  Lesson</title>
+    <link rel="stylesheet" href="../z. Tasks/web/homework1/180709005/ceramix.css">
+    <script src="jquery-3.6.0.min.js"></script>
+</head>
+<body style="place-items: center; text-align: center">
+
+<script>
+    let counter = 0
+
+    function delayMsg(){
+        counter+=1;
+        setInterval(rudy,1000*counter);
+        let a = $("#sec").text()
+        alert(a)
+    }
+
+    function rudy(){
+        let date1 = new Date()
+        document.getElementById("hour").innerHTML = date1.getHours() + ""
+        document.getElementById("min").innerHTML = date1.getMinutes() + ""
+        document.getElementById("sec").innerHTML = date1.getSeconds() + ""
+
+        document.getElementById("day").innerHTML = date1.getDate() + ""
+        document.getElementById("month").innerHTML = date1.getUTCMonth() + ""
+        document.getElementById("year").innerHTML = date1.getFullYear() + ""
+    }
+
+    function time(){
+        setTimeout(popup,1000)
+
+    }
+    function popup(){
+        window.open("#")
+    }
+</script>
+
+<button id="button2" onclick="delayMsg()"> Calendar </button>
+<p id="timerOutput">  </p>
+<div style="display: flex">
+    <h1 id="hour"></h1>
+    <h1>:</h1>
+    <h1 id="min"></h1>
+    <h1>:</h1>
+    <h1 id="sec"></h1>
+</div>
+
+<div style="display: flex">
+    <h1 id="day"></h1>
+    <h1>/</h1>
+    <h1 id="month"></h1>
+    <h1>/</h1>
+    <h1 id="year"></h1>
+</div>
+
+</body>
+</html>

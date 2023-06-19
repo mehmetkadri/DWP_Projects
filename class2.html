@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="res/icons/2-modified.gif">
+    <style>
+        table{
+            border: 1px solid black;
+            background-color: gray;
+            border-radius: 5px;
+        }
+        td,th{
+            padding: 5px 30px 5px 10px;
+            border: 1px solid black;
+        }
+        td{
+            border-radius: 5px;
+        }
+        th{
+            background-color: cornflowerblue;
+            border-radius: 5px;
+        }
+        tr:nth-child(odd){
+            background-color: #ef8e78;
+        }
+        tr:nth-child(even){
+             background-color: bisque;
+         }
+        td:hover{
+            background-color: #8f8fff;
+        }
+        body{
+            background-image: url("res/backgrounds/web_background.jpg");
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;
+        }
+        a:link{
+            color: darkblue;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:visited{
+            color: #8f8fff;
+            background-color: transparent;
+            text-decoration: none;
+        }
+        a:hover{
+            color: #30a638;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        a:active{
+            color: #ff5c00;
+            background-color: transparent;
+            text-decoration: underline;
+        }
+        .city{
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #myId{
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+    <!--classes like city belong to more than one element-->
+    <!--id belongs to only one element-->
+    <!--id also helps to jump to another part in the same page-->
+
+    <title>Second Lesson</title>
+
+</head>
+<body>
+
+<h1>Second Lesson</h1>
+
+
+
+<a href="https://www.mu.edu.tr" > <br> Open</a>
+
+<div style="border: 1px solid black">Hello World</div>
+
+<p> The div element is a block element, and will always start on a new line and take up the full width available (starttostartof(parent),endtoendof(parent))</p>
+
+<p> This is an inline span <span style="border: 1px solid black; color: red; background: bisque"><abbr title="Hello World!">H W!</abbr> </span> element inside a paragraph</p>
+
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+
+<p> Or like: <br> He said <q>To be or not to be..</q></p>
+
+<p>abbreviation is like: <abbr title="Data Science Research Group">DSRG</abbr></p>
+
+
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+<p> Quotation is like: <br> He said: </p>
+<blockquote> To be or not to be.. </blockquote>
+
+<!--<img src="france.jpg" alt="France" usemap="#francemap">-->
+
+<picture>
+    <source media="(min-width: 1000px)" srcset="res/images/france.jpg">
+    <source media="(min-width: 650px)" srcset="res/images/tree.png">
+    <img src="res/images/name.jpg">
+
+</picture>
+
+<table border = "1px">
+
+    <!--table row-->
+    <tr>
+
+        <!--table header-->
+        <th style="width: 30%" align ="left"><pre> Company Name </pre></th>
+        <th style="width: 25%" align ="left"><pre> Company Number </pre></th>
+        <th style="width: 35%" align ="left"><pre> Company Website </pre></th>
+
+    </tr>
+
+    <tr>
+
+        <!--table data-cell-->
+        <td><pre>MSKU</pre></td>
+        <td><pre>05301357313</pre></td>
+        <td><a href="https://www.mu.edu.tr" ><pre>Mugla Sitki Kocman University</pre></a></td>
+
+    </tr>
+
+    <tr>
+
+        <td><pre>Akdeniz University</pre></td>
+        <td><pre>05301357313</pre></td>
+        <td><a href="https://www.akdeniz.edu.tr/" ><pre>Akdeniz University</pre></a></td>
+
+    </tr>
+
+    <tr>
+
+        <!--table data-cell-->
+        <td><pre>MSKU</pre></td>
+        <td><pre>05301357313</pre></td>
+        <td><a href="https://www.mu.edu.tr" ><pre>Mugla Sitki Kocman University</pre></a></td>
+
+    </tr>
+
+    <tr>
+
+        <td><pre>Akdeniz University</pre></td>
+        <td><pre>05301357313</pre></td>
+        <td><a href="https://www.akdeniz.edu.tr/" ><pre>Akdeniz University</pre></a></td>
+
+    </tr>
+
+</table>
+
+<h2 class="city"> Paris </h2>
+
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sixth Lesson</title>
+</head>
+<body>
+
+<script>
+    function changeFunc(){
+        document.getElementById("button1").onclick=event
+    }
+    function event(){
+        let arr = document.getElementsByTagName("tr")
+        let arr2 = document.getElementsByTagName("td")
+
+        for (let j = 0; j < arr2.length ; j++){
+            if (j%2===0){
+                arr2[j].style.backgroundColor="red"
+            }else{
+                arr2[j].style.backgroundColor="green"
+            }
+        }
+        document.body.appendChild(document.createElement("p").appendChild(document.createTextNode("Kadri")))
+    }
+</script>
+
+
+<table id="board" border = "1px">
+
+    <!--table row-->
+    <tr>
+
+        <!--table header-->
+        <p style="height: 50px; width: 250px; text-align: center"> BOARD</p>
+
+
+
+    </tr>
+
+    <tr>
+        <td style="height: 50px; width: 50px; text-align: center">0</td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center">+</td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+    </tr>
+
+    <tr>
+
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center">+</td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+
+
+    </tr>
+
+    <tr>
+
+        <!--table data-cell-->
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+
+
+    </tr>
+
+    <tr>
+
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center">_</td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+        <td style="height: 50px; width: 50px; text-align: center"></td>
+
+
+    </tr>
+
+</table>
+
+<button id="button1" >dsfsdf </button>
+<button id="button2" onclick="changeFunc()">sdfs </button>
+
+</body>
+</html>
